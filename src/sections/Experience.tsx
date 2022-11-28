@@ -2,7 +2,7 @@ import CompanyButton from "../components/CompanyButton";
 import { ExperienceType } from "../types";
 
 interface ExperienceSectionProps {
-  experience: ExperienceType[]
+  experience?: ExperienceType[]
 }
 
 export default function ExperienceSection({ experience }: ExperienceSectionProps) {
@@ -12,7 +12,7 @@ export default function ExperienceSection({ experience }: ExperienceSectionProps
       <div>
         <base target='_blank' />
 
-        {experience.map((job, i) => <CompanyButton
+        {experience?.map((job, i) => <CompanyButton
           key={`job ${i}`}
           role={job.role}
           company={job.company}

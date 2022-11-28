@@ -3,7 +3,7 @@ import ProjectDialog from "../components/ProjectDialog"
 import { ProjectType } from "../types"
 
 interface ProjectsSectionProps {
-  projects: ProjectType[]
+  projects?: ProjectType[]
 }
 
 export default function ProjectsSection({ projects }: ProjectsSectionProps) {
@@ -13,7 +13,7 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
 
       <div>
         {
-          projects.map((project, i) => (
+          projects?.map((project, i) => (
             <ProjectDialog key={i} project={project} />
           ))
         }
