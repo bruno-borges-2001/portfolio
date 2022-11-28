@@ -1,0 +1,67 @@
+#greeting {
+  h1,
+  p {
+    margin: 0;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.7rem;
+  }
+}
+
+#history {
+  display: grid;
+  place-items: center;
+
+  background-color: var(--violet-800);
+
+  & > div {
+    max-width: 50%;
+  }
+}
+
+#experience,
+#projects {
+  & > div > div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    gap: 1rem;
+
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#skills {
+  .skills-category {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+#contact {
+  background-color: var(--violet-800);
+
+  .links-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    button,
+    a {
+      transition: all 0.2s;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+    }
+  }
+}
