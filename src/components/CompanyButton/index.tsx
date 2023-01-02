@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { companies } from "../../assets";
 
 import styles from './styles.module.scss'
 
