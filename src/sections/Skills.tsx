@@ -11,7 +11,7 @@ export default function SkillsSection({ skillsCategories }: SkillsSectionProps) 
       <div className="skills-category">
         {skillsCategories?.map((category, i) => (
           <div key={`category ${i}`}>
-            <h4>{category.title}</h4>
+            <h3>{category.title}</h3>
             <ul>
               {category.skill.map(
                 (skill, j) => <li key={`skill ${j} of category ${i}`}>{skill}</li>
