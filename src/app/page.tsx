@@ -33,7 +33,7 @@ async function loadData() {
     contacts: Object.values(response.contacts),
     experience: Object.values(response.experiences),
     history: Object.values(response.history),
-    projects: Object.values(response.projects).map(el => ({ ...el, description: Object.values(el.description), bulletPoints: Object.values(el.bulletPoints), links: Object.values(el.links), images: Object.values(el.images) })),
+    projects: Object.values(response.projects).map(el => ({ ...el, description: Object.values(el.description), bulletPoints: el.bulletPoints ? Object.values(el.bulletPoints) : null, links: Object.values(el.links), images: Object.values(el.images) })),
     skillsCategories: Object.values(response.skills).map(el => ({ ...el, skill: Object.values(el.skill) })),
   }
 
