@@ -7,7 +7,7 @@ interface SkillsSectionProps {
 export default function SkillsSection({ skillsCategories }: SkillsSectionProps) {
   return (
     <div>
-      <h2>Skills I acquired so far</h2>
+      <h2>Skills I&apos;ve acquired so far</h2>
       <div className="skills-category">
         {skillsCategories?.map((category, i) => (
           <div key={`category ${i}`}>
