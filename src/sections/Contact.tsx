@@ -10,7 +10,7 @@ export default function ContactSection({ contacts }: ContactSectionProps) {
 
   return (
     <div>
-      <h3>If you want to reach me...</h3>
+      <h3>If you want to reach me or get to know me better</h3>
       <div className='links-section'>
         {
           contacts?.map((contact, i) => (
