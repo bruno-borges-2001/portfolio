@@ -47,8 +47,8 @@ export default async function Home() {
     <>
       <Section type="greeting" params={{ personalInfo }} />
       <Section type="history" params={{ history }} />
-      <Section type="experience" params={{ experience }} />
       <Section type="projects" params={{ projects }} />
+      <Section type="experience" params={{ experience }} />
       <Section type="skills" params={{ skillsCategories }} />
       <Section type="contact" params={{ contacts }} />
     </>
