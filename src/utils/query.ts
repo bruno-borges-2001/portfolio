@@ -18,7 +18,10 @@ const query = `*[_type == 'portfolio'][0]{
       href
     },
     'company': company->company,
-    'images': [company->backgroundImage.asset->url]
+    'images': coalesce(
+      [company->backgroundImage.asset->url] + images[].asset->url,
+      [company->backgroundImage.asset->url]
+     )
   },
   'skills': skillCategories[] {
     title,
