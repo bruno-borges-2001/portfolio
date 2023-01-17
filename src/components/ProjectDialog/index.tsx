@@ -1,10 +1,10 @@
 'use client'
 
 import { Dialog, Transition } from "@headlessui/react";
-import Image from "next/image";
 import { Fragment, useState } from "react"
 import { HiExternalLink, HiX } from 'react-icons/hi'
 import { ProjectType } from "../../types";
+import ImagesCarousel from "../ImagesCarousel";
 import styles from './styles.module.scss'
 
 interface ProjectDialogProps {
@@ -62,7 +62,7 @@ export default function ProjectDialog({ project }: ProjectDialogProps) {
                   </button>
 
                   <div className={styles.leftColumn}>
-                    <Image src={project.images[0]} alt={'number 1'} height={150} width={287} />
+                    <ImagesCarousel images={project.images} height={150} />
                     <Dialog.Title>{project.title}</Dialog.Title>
                   </div>
                   <div className={styles.rightColumn}>

@@ -1,0 +1,172 @@
+.imageContainer {
+  position: relative;
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  max-width: 100%;
+
+  overflow: hidden;
+
+  background: var(--background);
+  border-radius: 0.5rem;
+}
+
+.imageControl {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+
+  height: 28px;
+  width: 28px;
+  background: var(--violet-600);
+
+  color: white;
+
+  display: grid;
+  place-items: center;
+}
+
+.image-0,
+.image-1,
+.image-3,
+.image-4 {
+  opacity: 0.5;
+  scale: 0.75;
+  z-index: 5;
+}
+
+.image-0,
+.image-4 {
+  opacity: 0;
+  z-index: 1;
+}
+
+.image-0 {
+  transform: translateX(-100%);
+}
+
+.image-1 {
+  transform: translateX(-90%);
+}
+
+.image-2 {
+  z-index: 10;
+}
+
+.image-3 {
+  transform: translateX(90%);
+}
+
+.image-4 {
+  transform: translateX(100%);
+}
+
+.next-1 {
+  animation: next-1-animation 0.25s forwards;
+}
+
+.next-2 {
+  animation: next-2-animation 0.25s forwards;
+}
+
+.next-3 {
+  animation: next-3-animation 0.25s forwards;
+}
+
+.next-4 {
+  animation: next-4-animation 0.25s forwards;
+}
+
+.prev-0 {
+  animation: prev-0-animation 0.25s forwards;
+}
+
+.prev-1 {
+  animation: prev-1-animation 0.25s forwards;
+}
+
+.prev-2 {
+  animation: prev-2-animation 0.25s forwards;
+}
+
+.prev-3 {
+  animation: prev-3-animation 0.25s forwards;
+}
+
+@keyframes next-1-animation {
+  100% {
+    opacity: 0;
+    display: none;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes next-2-animation {
+  25% {
+    scale: 0.75;
+  }
+  100% {
+    scale: 0.75;
+    opacity: 0.5;
+    z-index: 5;
+    transform: translateX(-90%);
+  }
+}
+
+@keyframes next-3-animation {
+  0% {
+    scale: 0.75;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+    z-index: 10;
+    transform: translateX(0);
+  }
+}
+
+@keyframes next-4-animation {
+  100% {
+    opacity: 0.5;
+    transform: translateX(90%);
+  }
+}
+
+@keyframes prev-0-animation {
+  100% {
+    opacity: 0.5;
+    transform: translateX(-90%);
+  }
+}
+
+@keyframes prev-1-animation {
+  80% {
+    scale: 0.75;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+    z-index: 10;
+    transform: translateX(0);
+  }
+}
+
+@keyframes prev-2-animation {
+  25% {
+    scale: 0.75;
+  }
+  100% {
+    scale: 0.75;
+    opacity: 0.5;
+    z-index: 5;
+    transform: translateX(90%);
+  }
+}
+
+@keyframes prev-3-animation {
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
