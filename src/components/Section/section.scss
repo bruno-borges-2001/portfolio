@@ -49,11 +49,23 @@
 #contact {
   background-color: var(--violet-800);
 
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .links-section {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+
+    padding: 1rem 1.25rem;
+    background: var(--background);
+    border-radius: 999px;
+
+    width: fit-content;
 
     button,
     a {

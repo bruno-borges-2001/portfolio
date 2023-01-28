@@ -23,6 +23,7 @@ export interface SkillsType {
 }
 
 export interface ContactType {
+  label: string;
   href: string;
   icon: string;
 }

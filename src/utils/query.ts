@@ -28,6 +28,7 @@ const query = `*[_type == 'portfolio'][0]{
     skill
   },
   contacts[] {
+    label,
     href,
     'icon': icon.asset->url
   }
