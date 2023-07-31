@@ -26,7 +26,7 @@ interface ResponseType {
 }
 
 async function loadData() {
-  const response = await client.fetch<ResponseType>(query);
+  const response = await client.fetch<ResponseType>({ query, config: { cache: 'no-cache' } });
 
   const data = {
     personalInfo: response.personalInfo,
