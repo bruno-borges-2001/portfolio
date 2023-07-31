@@ -21,7 +21,45 @@
   background-color: var(--violet-800);
 
   & > div {
-    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    max-width: 1290px;
+  }
+
+  .section {
+    display: flex;
+    gap: 6rem;
+
+    & > * {
+      max-width: 50%;
+      flex-basis: 50%;
+    }
+
+    .image-wrapper {
+      position: relative;
+      display: grid;
+      place-items: center;
+      flex-grow: 1;
+
+      & > img {
+        position: relative !important;
+        height: 400px !important;
+        width: auto;
+
+        border-radius: 1rem;
+      }
+    }
+
+    p {
+      text-align: justify;
+      margin: auto;
+    }
+
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+    }
   }
 }
 

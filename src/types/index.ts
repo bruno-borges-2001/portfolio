@@ -1,4 +1,7 @@
-export type HistoryType = string
+export interface HistoryType {
+  text: string;
+  image: string;
+}
 
 export interface ExperienceType {
   company: string;

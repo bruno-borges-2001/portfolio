@@ -1,6 +1,9 @@
 const query = `*[_type == 'portfolio'][0]{
   personalInfo,
-  history,
+  history[] {
+    text,
+    'image': image.asset->url
+  },
   experiences[] {
     'company': company->company,
     role,
