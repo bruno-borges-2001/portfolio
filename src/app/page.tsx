@@ -35,7 +35,7 @@ async function loadData() {
     history: Object.values(response.history),
     projects: Object.values(response.projects).map(el => ({
       ...el,
-      description: Object.values(el.description),
+      description: el.description ? Object.values(el.description) : null,
       bulletPoints: el.bulletPoints ? Object.values(el.bulletPoints) : null,
       links: Object.values(el.links), images: Object.values(el.images)
     })),
